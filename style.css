@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #a0dee9;
+    /* Light neutral background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    /* Three shades of blue gradient */
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.search input {
+    border: 0;
+    outline: none;
+    background: #e1f5fe;
+    /* Light blue input background */
+    color: #333;
+    padding: 12px 25px;
+    height: 60px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.search input:focus {
+    border: 2px solid #2196f3;
+    /* Deep blue border on focus */
+}
+
+.search button {
+    border: 0;
+    outline: none;
+    background: #ebfffc;
+    /* Deep blue button */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.search button:hover {
+    background: #6bf1b9;
+    /* Slightly darker blue on hover */
+    transform: rotate(360deg);
+}
+
+.search button img {
+    width: 30px;
+}
+
+.weather-icon {
+    width: 180px;
+    margin-top: 30px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.weather-icon:hover {
+    transform: scale(1.2) rotate(15deg);
+}
+
+.weather h1 {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #ffffff;
+    /* White for temperature text for better contrast */
+    animation: slideIn 0.8s ease-out;
+}
+
+.weather h2 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: -10px;
+    color: #e3f2fd;
+    /* Lighter blue for weather description */
+    animation: slideIn 1s ease-out 0.3s;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+    color: #f8f6f6;
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.humidity,
+.Wind {
+    font-size: 30px;
+    margin-top: -6px;
+    color: #f5f3f3;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
